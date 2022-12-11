@@ -1,0 +1,82 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkolivegreen;
+    color: whitesmoke;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.logo-img {
+    max-height: 42px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-text {
+    font-size: 1.1rem;
+}
+
+.hamburger-lines,
+.hamburger-lines::before,
+.hamburger-lines::after {
+    display: block;
+    position: absolute;
+    width: 27px;
+    height: 1px;
+    z-index: 9;
+    background-color: whitesmoke;
+    transition-duration: 0.2s;
+}
+
+.hamburger-lines::before {
+    content: '';
+    top: -7px;
+}
+
+.hamburger-lines::after {
+    content: '';
+    top: 7px;
+}
+
+.nav-ul {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: darkslategray;
+    left: 0;
+    top: 66px;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 0.25s;
+}
+
+.show {
+    opacity: 1;
+    top: 66px;
+    visibility: visible;
+}
+
+.nav-link {
+    width: 100%;
+    display: block;
+    padding: 0.5rem;
+}
+
+.nav-link:hover {
+    background-color: rgb(69, 88, 35);
+}
+
+.hamburger-button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
