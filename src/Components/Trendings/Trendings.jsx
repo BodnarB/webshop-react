@@ -18,10 +18,16 @@ export default function Trendings() {
                     prodTitle={'Forest fruit cake'}
                     prodPrice={6.5}
                 />
-                {/* <img className='trending-img' src="\Assets\Trendings\pexels-abhinav-goswami-291528.jpg" alt="" />
-                <img className='trending-img' src="\Assets\Trendings\pexels-matheus-guimarães-1291712.jpg" alt="" />
-                <img className='trending-img' src="\Assets\Trendings\pexels-quang-nguyen-vinh-2144200.jpg" alt="" />
-                <img className='trending-img' src="\Assets\Trendings\pexels-suzy-hazelwood-1126359.jpg" alt="" /> */}
+                 <ProductCard
+                    imgSrc={"\\Assets\\Trendings\\pexels-quang-nguyen-vinh-2144200.jpg"}
+                    prodTitle={'Strawberry cream cake'}
+                    prodPrice={7.8}
+                />
+                      <ProductCard
+                    imgSrc={"\\Assets\\Trendings\\pexels-suzy-hazelwood-1126359.jpg"}
+                    prodTitle={'Vanilla jelly cake'}
+                    prodPrice={6}
+                />
             </div>
             <button className='trending-btn'>All products <img className='arrow-icon' src={Arrow} alt="" /></button>
         </div>

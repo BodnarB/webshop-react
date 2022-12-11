@@ -3,6 +3,7 @@
     border-radius: 0.3rem;
     overflow: hidden;
     width: 45%;
+    height: 200px;
     display: flex;
     flex-direction: column;
 }
@@ -10,7 +11,7 @@
 .trending-img {
     display: block;
     height: 150px;
-    height: 65%;
+    height: 60%;
     object-fit: cover;
     width: 100%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -19,16 +20,32 @@
 
 .prod-info-box {
     text-align: center;
-    padding: 0.4rem 0.2rem;
-    font-size: 0.9rem;
+    position: relative;
+    padding: 0.5rem 0.4rem;
+    font-size: 0.83rem;
     background-color: rgb(250, 250, 250);
-    height: 35%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.prod-title,
-.prod-price {
+.prod-price, .prod-title {
     font-weight: 500;
+}
+
+.prod-buy-box {
+    display: flex;
+    justify-content: center;
+}
+
+.buy-btn {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.3rem 0;
+    background-color: #fdfdfd;
+    border: 1px solid #ab4e6898;
+    font-size: 1rem;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import './ProductCard.css'
+import cartImg from '../../Assets/bagfill.svg'
 
 export default function ProductCard({ imgSrc, prodTitle, prodPrice }) {
     return (
@@ -8,6 +9,7 @@ export default function ProductCard({ imgSrc, prodTitle, prodPrice }) {
             <div className='prod-info-box'>
                 <p className='prod-title'>{prodTitle}</p>
                 <p className='prod-price'>{prodPrice} $</p>
+                <button className='buy-btn'><img src={cartImg} alt="" /></button>
             </div>
         </div>
     )
