@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Header.css'
-import Logo from '../../Assets/icons8-cake-96.png'
+import Logo from '../../Assets/logo.svg'
 
 
 export default function Header() {
@@ -15,7 +15,7 @@ export default function Header() {
         <header>
             <a className='logo-container' href="#">
                 <img className='logo-img' src={Logo} alt="" />
-                <p className='logo-text'>Webshop</p>
+                <p className='logo-text'>Cake shop</p>
             </a>
             <nav>
                 <ul className={`nav-ul ${showClass}`}>
@@ -23,7 +23,7 @@ export default function Header() {
                     <li><a className='nav-link' href="">Products</a></li>
                     <li><a className='nav-link' href="">Contact</a></li>
                 </ul>
-                <div onClick={menuClick} className='hamburger-button js-hamburger-button'>
+                <div onClick={menuClick} className='hamburger-button'>
                     <span className='hamburger-lines'></span>
                 </div>
             </nav>

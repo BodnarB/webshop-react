@@ -1,0 +1,15 @@
+main {
+    background-color: #FCFFF7;
+    color: rgb(19, 19, 19);
+    letter-spacing: 0.8px;
+    word-spacing: 1px;
+    line-height: 1.25;
+}
+
+.intro-text {
+    margin: 1rem;
+}
+
+.intro-img {
+    display: block;
+}

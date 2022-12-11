@@ -1,0 +1,43 @@
+h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 0 1rem;
+    font-family: 'Caveat', cursive;
+}
+
+.trendings-container {
+    background-color: #fdeeef;
+    color: rgb(0, 0, 0);
+    padding: 1rem 0;
+}
+
+.trending-img-container {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.trending-btn {
+    padding: 0.5rem 0.8rem;
+    background-color: #AB4E68;
+    color: #ffffff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 1rem auto;
+    border-radius: 0.15rem;
+    transition-duration: 0.3s;
+}
+
+.arrow-icon {
+    height: 15px;
+}
+
+.trending-btn:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
