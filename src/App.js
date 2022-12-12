@@ -7,14 +7,28 @@ import Cart from './Components/Cart/Cart'
 import { useState } from 'react'
 
 function App() {
-
-  const [cartItems, setCartItems] = useState([])
   const [hideCart, setHideCart] = useState('')
-  function addToCart(prodTitle, prodPrice) {
-    setCartItems([...cartItems, { prodTitle, prodPrice }])
-    console.log(cartItems)
-  }
+  const [cartItems, setCartItems] = useState([])
+ 
+console.log('render?')
 
+
+  function addToCart(prodTitle, prodPrice) {
+     let cart = [...cartItems]
+    if (cart.filter((item) => prodTitle === item.prodTitle).length > 0) {
+      let idx = cart.findIndex(prod => prod.prodTitle === prodTitle)
+      cart[idx].prodQuantity += 1
+    }
+    else {
+      cart.push({
+        prodTitle: prodTitle,
+        prodPrice: prodPrice,
+        prodQuantity: 1
+      })
+    }
+    setCartItems(cart)
+    console.log('list', cartItems)
+  }
 
   function closeCart() {
     hideCart === '' ? setHideCart('show-cart') : setHideCart('')
