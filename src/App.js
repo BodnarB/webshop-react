@@ -9,12 +9,12 @@ import { useState } from 'react'
 function App() {
   const [hideCart, setHideCart] = useState('')
   const [cartItems, setCartItems] = useState([])
- 
-console.log('render?')
+  const [cartQty, setCartQty] = useState(0)
 
 
   function addToCart(prodTitle, prodPrice) {
-     let cart = [...cartItems]
+    let cart = [...cartItems]
+    let catQtyCalc = 0
     if (cart.filter((item) => prodTitle === item.prodTitle).length > 0) {
       let idx = cart.findIndex(prod => prod.prodTitle === prodTitle)
       cart[idx].prodQuantity += 1
@@ -26,6 +26,8 @@ console.log('render?')
         prodQuantity: 1
       })
     }
+    cart.forEach(prod => catQtyCalc += prod.prodQuantity)
+    setCartQty(catQtyCalc)
     setCartItems(cart)
     console.log('list', cartItems)
   }
@@ -36,7 +38,7 @@ console.log('render?')
 
   return (
     <div className="App">
-      <Header cartNum={cartItems.length} openCart={closeCart} />
+      <Header cartNum={cartQty} openCart={closeCart} />
       <Cart hideCart={hideCart} closeCart={closeCart} cartItems={cartItems} />
       <Home addToCart={addToCart} />
       <Footer />
