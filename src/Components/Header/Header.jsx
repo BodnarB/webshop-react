@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import './Header.css'
 import Logo from '../../Assets/logo.svg'
+import Cart from '../../Assets/bagfill.svg'
 
 
-export default function Header() {
+export default function Header({ cartNum }) {
 
 
     const [showClass, setShowClass] = useState('')
@@ -13,9 +14,13 @@ export default function Header() {
 
     return (
         <header>
+            <div className='header-cart-container'>
+                <img className='header-cart-img' src={Cart} alt="" />
+                <p className='header-cart-text'>{cartNum}</p>
+            </div>
             <a className='logo-container' href="#">
-                <img className='logo-img' src={Logo} alt="" />
                 <p className='logo-text'>Cake shop</p>
+                <img className='logo-img' src={Logo} alt="" />
             </a>
             <nav>
                 <ul className={`nav-ul ${showClass}`}>

@@ -6,7 +6,7 @@ h3 {
 }
 
 .trendings-container {
-    background-color: #fdeeef;
+    background-color: #f0efef;
     color: rgb(0, 0, 0);
     padding: 1rem 0;
 }
@@ -27,7 +27,7 @@ h3 {
     display: flex;
     align-items: center;
     gap: 0.2rem;
-    margin: 1rem auto;
+    margin: 1.5rem auto 1rem;
     border-radius: 0.15rem;
     transition-duration: 0.3s;
 }
@@ -37,7 +37,7 @@ h3 {
 }
 
 .trending-btn:hover {
-    background-color: antiquewhite;
+    background-color: rgb(46, 46, 46);
     cursor: pointer;
     transition-duration: 0.3s;
 }
