@@ -1,19 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Cart.css'
+import CartItem from '../CartItem/CartItem'
 
-export default function Cart() {
+export default function Cart({ closeCart, hideCart, cartItems }) {
+
     return (
-        <div className='cart-container'>
+        <div className={`cart-container ${hideCart}`}>
             <div className='cart-header'>
                 <p>Cart</p>
-                <p>X</p>
+                <button onClick={closeCart} className='cart-close-btn'>X</button>
             </div>
             <div className='cart-list'>
-                <div className='cart-item'>
-                    <p>Item</p>
-                    <p>1 pc</p>
-                    <p>6 $</p>
-                </div>
+                <CartItem cartItems={cartItems}/>
             </div>
         </div>
     )

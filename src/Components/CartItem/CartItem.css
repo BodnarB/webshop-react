@@ -1,0 +1,12 @@
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-weight: 300;
+    padding: 0.4rem;
+}
+
+.cart-item-name {
+    display: flex;
+    gap: 0.5rem;
+}

@@ -4,7 +4,7 @@ import Logo from '../../Assets/logo.svg'
 import Cart from '../../Assets/bagfill.svg'
 
 
-export default function Header({ cartNum }) {
+export default function Header({ cartNum, openCart }) {
 
 
     const [showClass, setShowClass] = useState('')
@@ -14,7 +14,7 @@ export default function Header({ cartNum }) {
 
     return (
         <header>
-            <div className='header-cart-container'>
+            <div className='header-cart-container' onClick={openCart}>
                 <img className='header-cart-img' src={Cart} alt="" />
                 <p className='header-cart-text'>{cartNum}</p>
             </div>
