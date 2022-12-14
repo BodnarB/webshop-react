@@ -4,6 +4,7 @@ import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
 import Footer from './Components/Footer/Footer'
 import Cart from './Components/Cart/Cart'
+import DeletePopup from './Components/DeletePopup/DeletePopup'
 import { useState } from 'react'
 
 function App() {
@@ -11,17 +12,21 @@ function App() {
   const [cartItems, setCartItems] = useState([])
   const [cartQty, setCartQty] = useState(0)
 
-
   function addToCart(prodTitle, prodPrice) {
     let cart = [...cartItems]
     let catQtyCalc = 0
     if (cart.filter((item) => prodTitle === item.prodTitle).length > 0) {
       let idx = cart.findIndex(prod => prod.prodTitle === prodTitle)
-      cart[idx].prodQuantity += 1
+      if (cart[idx].prodQuantity < 30) {
+        cart[idx].prodQuantity += 1
+        cart[idx].priceOneProd = prodPrice
+        cart[idx].prodPrice = (cart[idx].priceOneProd * cart[idx].prodQuantity).toFixed(2)
+      }
     }
     else {
       cart.push({
         prodTitle: prodTitle,
+        priceOneProd: prodPrice,
         prodPrice: prodPrice,
         prodQuantity: 1
       })
@@ -36,10 +41,41 @@ function App() {
     hideCart === '' ? setHideCart('show-cart') : setHideCart('')
   }
 
+  function removeProd(prodTitle, prodQuantity) {
+    if (prodQuantity > 1) {
+      let cart = [...cartItems]
+      let catQtyCalc = 0
+      let idx = cartItems.findIndex(i => i.prodTitle === prodTitle)
+      cart[idx].prodQuantity -= 1
+      cart[idx].prodPrice = (cart[idx].priceOneProd * cart[idx].prodQuantity).toFixed(2)
+      if (cart[idx].prodQuantity === 0) {
+        console.log('torles?')
+      }
+      cart.forEach(prod => catQtyCalc += prod.prodQuantity)
+      setCartQty(catQtyCalc)
+      setCartItems(cart)
+      console.log('list', cartItems)
+    }
+  }
+
+  function addProd(prodTitle, prodQuantity) {
+    if (prodQuantity < 30) {
+      let cart = [...cartItems]
+      let catQtyCalc = 0
+      let idx = cartItems.findIndex(i => i.prodTitle === prodTitle)
+      cart[idx].prodQuantity += 1
+      cart[idx].prodPrice = (cart[idx].priceOneProd * cart[idx].prodQuantity).toFixed(2)
+      cart.forEach(prod => catQtyCalc += prod.prodQuantity)
+      setCartQty(catQtyCalc)
+      setCartItems(cart)
+    }
+  }
+
   return (
     <div className="App">
       <Header cartNum={cartQty} openCart={closeCart} />
-      <Cart hideCart={hideCart} closeCart={closeCart} cartItems={cartItems} />
+      <Cart hideCart={hideCart} closeCart={closeCart} cartItems={cartItems} removeProd={removeProd} addProd={addProd} />
+      <DeletePopup />
       <Home addToCart={addToCart} />
       <Footer />
     </div>

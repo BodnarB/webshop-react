@@ -3,7 +3,7 @@
     top: 46px;
     height: 100%;
     width: 100%;
-    background-color: rgba(41, 41, 41, 0.6);
+    background-color: rgba(41, 41, 41, 0.7);
     backdrop-filter: blur(6px);
     color: white;
     z-index: 5;
@@ -27,7 +27,7 @@
 }
 
 .cart-list {
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;

@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Cart.css'
 import CartItem from '../CartItem/CartItem'
 
-export default function Cart({ closeCart, hideCart, cartItems }) {
+export default function Cart({ closeCart, hideCart, cartItems, removeProd, addProd }) {
 
     return (
         <div className={`cart-container ${hideCart}`}>
@@ -11,7 +11,7 @@ export default function Cart({ closeCart, hideCart, cartItems }) {
                 <button onClick={closeCart} className='cart-close-btn'>X</button>
             </div>
             <div className='cart-list'>
-                <CartItem cartItems={cartItems}/>
+                <CartItem cartItems={cartItems} removeProd={removeProd} addProd={addProd} />
             </div>
         </div>
     )
