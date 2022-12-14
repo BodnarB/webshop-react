@@ -2,7 +2,7 @@ import React from 'react'
 import './Cart.css'
 import CartItem from '../CartItem/CartItem'
 
-export default function Cart({ closeCart, hideCart, cartItems, removeProd, addProd }) {
+export default function Cart({ closeCart, hideCart, cartItems, removeProd, addProd, delProd }) {
 
     return (
         <div className={`cart-container ${hideCart}`}>
@@ -11,7 +11,7 @@ export default function Cart({ closeCart, hideCart, cartItems, removeProd, addPr
                 <button onClick={closeCart} className='cart-close-btn'>X</button>
             </div>
             <div className='cart-list'>
-                <CartItem cartItems={cartItems} removeProd={removeProd} addProd={addProd} />
+                <CartItem cartItems={cartItems} removeProd={removeProd} addProd={addProd} delProd={delProd}/>
             </div>
         </div>
     )

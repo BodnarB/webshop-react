@@ -4,7 +4,7 @@ import PlusBtn from '../../Assets/plus-lg.svg'
 import MinusBtn from '../../Assets/dash-lg.svg'
 import DelBtn from '../../Assets/trash3.svg'
 
-export default function CartItem({ cartItems, removeProd, addProd }) {
+export default function CartItem({ cartItems, removeProd, addProd, delProd }) {
     return (
         <>
             {cartItems.map((element, index) => {
@@ -27,7 +27,7 @@ export default function CartItem({ cartItems, removeProd, addProd }) {
                                     </button>
                                 </div>
                             </div>
-                            <img src={DelBtn} alt="" />
+                            <img onClick={() => { delProd(element.prodTitle) }} src={DelBtn} alt="" />
                         </div>
                     </div>
                 )

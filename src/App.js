@@ -34,7 +34,6 @@ function App() {
     cart.forEach(prod => catQtyCalc += prod.prodQuantity)
     setCartQty(catQtyCalc)
     setCartItems(cart)
-    console.log('list', cartItems)
   }
 
   function closeCart() {
@@ -54,7 +53,6 @@ function App() {
       cart.forEach(prod => catQtyCalc += prod.prodQuantity)
       setCartQty(catQtyCalc)
       setCartItems(cart)
-      console.log('list', cartItems)
     }
   }
 
@@ -71,10 +69,21 @@ function App() {
     }
   }
 
+  function delProd(prodTitle) {
+    let cart = [...cartItems]
+    let catQtyCalc = 0
+    let idx = cartItems.findIndex(i => i.prodTitle === prodTitle)
+    cart.splice(idx, 1)
+    cart.forEach(prod => catQtyCalc += prod.prodQuantity)
+    setCartQty(catQtyCalc)
+    setCartItems(cart)
+  }
+
   return (
     <div className="App">
       <Header cartNum={cartQty} openCart={closeCart} />
-      <Cart hideCart={hideCart} closeCart={closeCart} cartItems={cartItems} removeProd={removeProd} addProd={addProd} />
+      <Cart hideCart={hideCart} closeCart={closeCart} cartItems={cartItems}
+        removeProd={removeProd} addProd={addProd} delProd={delProd} />
       <DeletePopup />
       <Home addToCart={addToCart} />
       <Footer />
