@@ -19,9 +19,15 @@ export default function Cart({ closeCart, hideCart, cartItems, removeProd, addPr
                 }
                 <CartItem cartItems={cartItems} removeProd={removeProd} addProd={addProd} delProd={delProd} />
             </div>
-            <div className='cart-sum'>
-                <p className='subtotal-text'>Subtotal ({subtotalQty} items):</p><p className='subtotal-price'>{subtotalPrice} $</p>
-            </div>
+            {subtotalQty != 0 &&
+                <>
+                    <div className='cart-sum'>
+                        <p className='subtotal-text'>Subtotal ({subtotalQty} {subtotalQty === 1 ? <>item</> : <>items</>}):</p>
+                        <p className='subtotal-price'>{subtotalPrice} $</p>
+                    </div>
+                    <button className='checkout-btn'>Proceed to Checkout</button>
+                </>
+            }
         </div>
     )
 }
