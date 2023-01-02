@@ -56,3 +56,12 @@
     border-radius: 0.5rem;
     padding: 1rem;
 }
+
+.cart-sum {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

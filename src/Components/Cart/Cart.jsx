@@ -3,7 +3,7 @@ import './Cart.css'
 import CartItem from '../CartItem/CartItem'
 import EmptyCartImg from '../../Assets/emptycart.png'
 
-export default function Cart({ closeCart, hideCart, cartItems, removeProd, addProd, delProd }) {
+export default function Cart({ closeCart, hideCart, cartItems, removeProd, addProd, delProd, subtotalPrice, subtotalQty }) {
 
     return (
         <div className={`cart-container ${hideCart}`}>
@@ -18,6 +18,9 @@ export default function Cart({ closeCart, hideCart, cartItems, removeProd, addPr
                     </div>
                 }
                 <CartItem cartItems={cartItems} removeProd={removeProd} addProd={addProd} delProd={delProd} />
+            </div>
+            <div className='cart-sum'>
+                <p className='subtotal-text'>Subtotal ({subtotalQty} items):</p><p className='subtotal-price'>{subtotalPrice} $</p>
             </div>
         </div>
     )

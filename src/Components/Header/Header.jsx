@@ -32,7 +32,6 @@ export default function Header({ cartNum, openCart }) {
                     <span className='hamburger-lines'></span>
                 </div>
             </nav>
-
         </header>
     )
 }

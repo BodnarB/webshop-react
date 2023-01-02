@@ -11,6 +11,9 @@ function App() {
   const [hideCart, setHideCart] = useState('')
   const [cartItems, setCartItems] = useState([])
   const [cartQty, setCartQty] = useState(0)
+  const subT = cartItems.map(item => parseFloat(item.prodPrice))
+  const subQty = cartItems.map(item => item.prodQuantity)
+
 
   function addToCart(prodTitle, prodPrice) {
     let cart = [...cartItems]
@@ -79,8 +82,12 @@ function App() {
   return (
     <div className="App">
       <Header cartNum={cartQty} openCart={closeCart} />
-      <Cart hideCart={hideCart} closeCart={closeCart} cartItems={cartItems}
-        removeProd={removeProd} addProd={addProd} delProd={delProd} />
+      <Cart
+        hideCart={hideCart} closeCart={closeCart} cartItems={cartItems}
+        removeProd={removeProd} addProd={addProd} delProd={delProd}
+        subtotalPrice={subT.reduce((accumulator, currentValue) => accumulator + currentValue, 0)}
+        subtotalQty={subQty.reduce((accumulator, currentValue) => accumulator + currentValue, 0)}
+      />
       <DeletePopup />
       <Home addToCart={addToCart} />
       <Footer />
