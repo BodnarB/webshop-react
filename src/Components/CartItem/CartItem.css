@@ -39,8 +39,25 @@
 
 .prod-qty-btn {
     background-color: rgb(201, 199, 199);
+    transition-duration: 0.2s;
     width: 20px;
     height: 20px;
+}
+
+.prod-qty-btn:hover {
+    cursor: pointer;
+    transition-duration: 0.2s;
+    background-color: rgb(146, 146, 146);
+}
+
+.prod-del-btn {
+    transition-duration: 0.25s;
+}
+
+.prod-del-btn:hover {
+    cursor: pointer;
+    transition-duration: 0.25s;
+    filter: drop-shadow(0 0 2px rgb(255, 0, 0));
 }
 
 .qty-text {

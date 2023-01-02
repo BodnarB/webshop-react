@@ -27,7 +27,7 @@ export default function CartItem({ cartItems, removeProd, addProd, delProd }) {
                                     </button>
                                 </div>
                             </div>
-                            <img onClick={() => { delProd(element.prodTitle) }} src={DelBtn} alt="" />
+                            <img className='prod-del-btn' onClick={() => { delProd(element.prodTitle) }} src={DelBtn} alt="" />
                         </div>
                     </div>
                 )

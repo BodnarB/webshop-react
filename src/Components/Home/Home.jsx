@@ -7,6 +7,7 @@ export default function Home({ addToCart, prodTitle }) {
     return (
         <main>
             <div className='intro-img-fade'>
+                <h2 className='main-title'>The best cakes in town</h2>
                 <img className='intro-img' src={illustration} alt="" />
             </div>
             <p className='intro-text'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.

@@ -48,4 +48,11 @@
     background-color: #fdfdfd;
     border: 1px solid #ab4e6898;
     font-size: 1rem;
+    transition-duration: 0.25s;
+}
+
+.buy-btn:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
+    transition-duration: 0.25s;
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Cart.css'
 import CartItem from '../CartItem/CartItem'
+import EmptyCartImg from '../../Assets/emptycart.png'
 
 export default function Cart({ closeCart, hideCart, cartItems, removeProd, addProd, delProd }) {
 
@@ -11,7 +12,12 @@ export default function Cart({ closeCart, hideCart, cartItems, removeProd, addPr
                 <button onClick={closeCart} className='cart-close-btn'>X</button>
             </div>
             <div className='cart-list'>
-                <CartItem cartItems={cartItems} removeProd={removeProd} addProd={addProd} delProd={delProd}/>
+                {cartItems.length === 0 &&
+                    <div className='empty-cart-container'>
+                        <img src={EmptyCartImg} alt="" /><p className='empty-cart'>Your cart is empty</p>
+                    </div>
+                }
+                <CartItem cartItems={cartItems} removeProd={removeProd} addProd={addProd} delProd={delProd} />
             </div>
         </div>
     )

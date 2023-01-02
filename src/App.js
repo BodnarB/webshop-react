@@ -47,9 +47,6 @@ function App() {
       let idx = cartItems.findIndex(i => i.prodTitle === prodTitle)
       cart[idx].prodQuantity -= 1
       cart[idx].prodPrice = (cart[idx].priceOneProd * cart[idx].prodQuantity).toFixed(2)
-      if (cart[idx].prodQuantity === 0) {
-        console.log('torles?')
-      }
       cart.forEach(prod => catQtyCalc += prod.prodQuantity)
       setCartQty(catQtyCalc)
       setCartItems(cart)

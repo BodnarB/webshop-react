@@ -14,11 +14,21 @@ header {
     position: relative;
 }
 
+.header-cart-container:hover {
+    cursor: pointer;
+}
+
+.header-cart-container:hover .header-cart-text {
+    box-shadow: 0 0 5px black;
+    transition-duration: 0.25s;
+}
+
 .header-cart-img {
     height: 19px;
 }
 
 .header-cart-text {
+    transition-duration: 0.25s;
     position: absolute;
     font-size: 0.7rem;
     bottom: -8px;
