@@ -5,7 +5,7 @@ import Home from './Components/Home/Home'
 import Footer from './Components/Footer/Footer'
 import Cart from './Components/Cart/Cart'
 import DeletePopup from './Components/DeletePopup/DeletePopup'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
   const [hideCart, setHideCart] = useState('')
@@ -42,6 +42,22 @@ function App() {
   function closeCart() {
     hideCart === '' ? setHideCart('show-cart') : setHideCart('')
   }
+
+  useEffect(() => {
+    if (hideCart !== '') {
+      let scrollPosition = window.scrollY
+      document.body.classList.add('scroll-disable')
+      document.body.style.top = `-${scrollPosition}px`
+    }
+    else {
+      let scrollValue = Math.abs(parseInt(document.body.style.top))
+      document.body.classList.remove('scroll-disable')
+      window.scrollTo({
+        top: scrollValue,
+        behavior: 'instant'
+      })
+    }
+  }, [hideCart])
 
   function removeProd(prodTitle, prodQuantity) {
     if (prodQuantity > 1) {

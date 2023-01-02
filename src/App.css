@@ -8,6 +8,11 @@ body {
   min-width: 290px;
 }
 
+.scroll-disable {
+  position: fixed;
+  overflow-y: scroll;
+}
+
 .App {
   position: relative;
 }
