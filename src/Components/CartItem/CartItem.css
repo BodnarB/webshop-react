@@ -1,7 +1,6 @@
 .cart-item {
     display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.5rem;
     background-color: rgba(10, 10, 10);
     border-radius: 0.15rem;
     font-weight: 300;
@@ -16,12 +15,7 @@
 
 .prod-btns-container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.1rem;
-}
-
-.cart-item-name {
-    width: 60%;
+    gap: 0.5rem;
 }
 
 .prod-qty-container {
@@ -76,4 +70,25 @@
 .qty-btns {
     display: flex;
     gap: 0.3rem;
+}
+
+.prod-img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 0.2rem;
+}
+
+
+.prod-img-qty-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.cart-right-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
 }

@@ -32,9 +32,10 @@ header {
     position: absolute;
     font-size: 0.7rem;
     bottom: -8px;
-    right: -11px;
+    right: -15px;
     width: 21px;
     height: 21px;
+    padding: 0.6rem;
     font-weight: 500;
     display: flex;
     justify-content: center;

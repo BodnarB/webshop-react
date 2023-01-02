@@ -1,5 +1,5 @@
 .cart-container {
-    position: fixed;
+    position: absolute;
     top: 46px;
     height: 100%;
     width: 100%;

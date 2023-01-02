@@ -14,8 +14,7 @@ function App() {
   const subT = cartItems.map(item => parseFloat(item.prodPrice))
   const subQty = cartItems.map(item => item.prodQuantity)
 
-
-  function addToCart(prodTitle, prodPrice) {
+  function addToCart(prodTitle, prodPrice, imgSrc) {
     let cart = [...cartItems]
     let catQtyCalc = 0
     if (cart.filter((item) => prodTitle === item.prodTitle).length > 0) {
@@ -31,7 +30,8 @@ function App() {
         prodTitle: prodTitle,
         priceOneProd: prodPrice,
         prodPrice: prodPrice,
-        prodQuantity: 1
+        prodQuantity: 1,
+        imgSrc: imgSrc
       })
     }
     cart.forEach(prod => catQtyCalc += prod.prodQuantity)
@@ -40,24 +40,25 @@ function App() {
   }
 
   function closeCart() {
+    window.scrollTo({ top: 0 })
     hideCart === '' ? setHideCart('show-cart') : setHideCart('')
   }
 
-  useEffect(() => {
-    if (hideCart !== '') {
-      let scrollPosition = window.scrollY
-      document.body.classList.add('scroll-disable')
-      document.body.style.top = `-${scrollPosition}px`
-    }
-    else {
-      let scrollValue = Math.abs(parseInt(document.body.style.top))
-      document.body.classList.remove('scroll-disable')
-      window.scrollTo({
-        top: scrollValue,
-        behavior: 'instant'
-      })
-    }
-  }, [hideCart])
+  // useEffect(() => {
+  //   if (hideCart !== '') {
+  //     let scrollPosition = window.scrollY
+  //     document.body.classList.add('scroll-disable')
+  //     document.body.style.top = `-${scrollPosition}px`
+  //   }
+  //   else {
+  //     let scrollValue = Math.abs(parseInt(document.body.style.top))
+  //     document.body.classList.remove('scroll-disable')
+  //     window.scrollTo({
+  //       top: scrollValue,
+  //       behavior: 'instant'
+  //     })
+  //   }
+  // }, [hideCart])
 
   function removeProd(prodTitle, prodQuantity) {
     if (prodQuantity > 1) {
