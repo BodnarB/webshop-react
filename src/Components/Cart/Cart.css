@@ -1,6 +1,7 @@
 .cart-container {
     position: absolute;
-    top: 46px;
+    top: 0px;
+    padding-top: 46px;
     height: 100%;
     width: 100%;
     background-color: rgba(41, 41, 41, 0.7);
