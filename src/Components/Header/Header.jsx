@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Header.css'
 import Logo from '../../Assets/logo.svg'
 import Cart from '../../Assets/bagfill.svg'
-
+import { Link } from 'react-router-dom'
 
 export default function Header({ cartNum, openCart }) {
 
@@ -18,14 +18,14 @@ export default function Header({ cartNum, openCart }) {
                 <img className='header-cart-img' src={Cart} alt="" />
                 <p className='header-cart-text'>{cartNum}</p>
             </div>
-            <a className='logo-container' href="#">
+            <Link className='logo-container' to="/">
                 <p className='logo-text'>Cake shop</p>
                 <img className='logo-img' src={Logo} alt="" />
-            </a>
+            </Link>
             <nav>
                 <ul className={`nav-ul ${showClass}`}>
-                    <li><a className='nav-link' href="">Home</a></li>
-                    <li><a className='nav-link' href="">Products</a></li>
+                    <li><Link className='nav-link' to="/">Home</Link></li>
+                    <li><Link className='nav-link' to="/products">Products</Link></li>
                     <li><a className='nav-link' href="">Contact</a></li>
                 </ul>
                 <div onClick={menuClick} className='hamburger-button'>

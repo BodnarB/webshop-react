@@ -1,14 +1,17 @@
 import React from 'react'
-import './Trendings.css'
-import ProductCard from '../ProductCard/ProductCard'
-import Arrow from '../../Assets/angles-right-solid.svg'
-import { Link } from 'react-router-dom'
+import ProductCard from '../../Components/ProductCard/ProductCard'
+import './Products.css'
 
-export default function Trendings({ addToCart, prodTitle }) {
+export default function Products({ addToCart }) {
     return (
-        <div className='trendings-container'>
-            <h3>Best seller products</h3>
-            <div className='trending-img-container'>
+        <div className='products-page'>
+            <h2 className='prod-h2'>Products</h2>
+            <select className='sorting-products' name="order" id="order">
+                <option value="price-low">Price: Low to high</option>
+                <option value="price-high">Price: High to low</option>
+                <option value="a-z">A-Z</option>
+            </select>
+            <div className='products-container'>
                 <ProductCard
                     imgSrc={"\\Assets\\Trendings\\pexels-abhinav-goswami-291528.jpg"}
                     prodTitle={'Extra chocolate cake'}
@@ -34,7 +37,6 @@ export default function Trendings({ addToCart, prodTitle }) {
                     addToCart={addToCart}
                 />
             </div>
-            <Link to='/products'><button className='trending-btn'>All products <img className='arrow-icon' src={Arrow} alt="" /></button></Link>
         </div>
     )
 }
