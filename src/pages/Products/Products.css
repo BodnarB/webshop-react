@@ -17,11 +17,46 @@
     gap: 0.5rem;
 }
 
-.sorting-products {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+.custom-select {
+    position: relative;
+}
+
+.select-btn {
+    margin: 1rem;
+    background-color: white;
+    padding: 0.3rem;
     border-radius: 0.5rem;
-    padding: 0.1rem 0.2rem;
-    margin: 0 1rem 1rem;
+}
+
+.select-btn:hover {
+    cursor: pointer;
+}
+
+.products-sorting {
+    position: absolute;
+    top: 25px;
+    z-index: 3;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    width: fit-content;
+    margin: 1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sorting-mode {
+    padding: 0.3rem;
+}
+
+.sorting-mode:hover {
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+}
+
+.products-sorting.hide {
+    display: none;
 }
