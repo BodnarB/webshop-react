@@ -1,16 +1,26 @@
 import React from 'react'
 import ProductCard from '../../Components/ProductCard/ProductCard'
 import './Products.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ProductsList from '..//../Products.json'
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Products({ addToCart }) {
 
     const [selected, setSelected] = useState('Price: Low to high')
     const [showSelect, setShowSelect] = useState('hide')
-
-    console.log(ProductsList)
-    console.log(ProductsList.sort((a, b) => a.prodPrice - b.prodPrice),'sorted')
+    let ProductsAscending = [...ProductsList].sort((a, b) => a.prodPrice - b.prodPrice)
+    let ProductsDescending = [...ProductsList].sort((a, b) => b.prodPrice - a.prodPrice)
+    let ProductsAZ = [...ProductsList].sort((a, b) => {
+        if (a.prodTitle < b.prodTitle) {
+            return -1
+        }
+        if (a.prodTitle > b.prodTitle) {
+            return 1
+        }
+        return 0
+    })
+    const [sortingRender, setSortingRender] = useState(ProductsAscending)
 
     function selectMenu() {
         showSelect === '' ? setShowSelect('hide') : setShowSelect('')
@@ -20,6 +30,20 @@ export default function Products({ addToCart }) {
         setSelected(e.target.innerText)
         setShowSelect('hide')
     }
+
+    useEffect(() => {
+        let sortingRendering = ''
+        if (selected === 'Price: Low to high') {
+            sortingRendering = ProductsAscending
+        }
+        else if (selected === 'Price: High to low') {
+            sortingRendering = ProductsDescending
+        }
+        else if (selected === 'A-Z') {
+            sortingRendering = ProductsAZ
+        }
+        setSortingRender(sortingRendering)
+    }, [selected])
 
     return (
         <div className='products-page'>
@@ -33,54 +57,15 @@ export default function Products({ addToCart }) {
                 </ul>
             </div>
             <div className='products-container'>
-                <ProductCard
-                    imgSrc={"\\Assets\\Trendings\\pexels-abhinav-goswami-291528.jpg"}
-                    prodTitle={'Extra chocolate cake'}
-                    prodPrice={7}
-                    addToCart={addToCart}
-                />
-                <ProductCard
-                    imgSrc={"\\Assets\\Trendings\\pexels-matheus-guimarães-1291712.jpg"}
-                    prodTitle={'Forest fruit cake'}
-                    prodPrice={6.5}
-                    addToCart={addToCart}
-                />
-                <ProductCard
-                    imgSrc={"\\Assets\\Trendings\\pexels-quang-nguyen-vinh-2144200.jpg"}
-                    prodTitle={'Strawberry cream cake'}
-                    prodPrice={7.8}
-                    addToCart={addToCart}
-                />
-                <ProductCard
-                    imgSrc={"\\Assets\\Trendings\\pexels-suzy-hazelwood-1126359.jpg"}
-                    prodTitle={'Vanilla jelly cake'}
-                    prodPrice={6}
-                    addToCart={addToCart}
-                />
-                <ProductCard
-                    imgSrc={"\\Assets\\Products\\pexels-valeria-boltneva-827516.jpg"}
-                    prodTitle={'Raspberry cake'}
-                    prodPrice={5.6}
-                    addToCart={addToCart}
-                />
-                <ProductCard
-                    imgSrc={"\\Assets\\Products\\pexels-valeria-boltneva-1639564.jpg"}
-                    prodTitle={'Vanilla cake with berries'}
-                    prodPrice={5.6}
-                    addToCart={addToCart}
-                />
-                <ProductCard
-                    imgSrc={"\\Assets\\Products\\pexels-erick-mufasa-1414234.jpg"}
-                    prodTitle={'Pink and white cake'}
-                    prodPrice={6}
-                    addToCart={addToCart}
-                />
-                <ProductCard
-                    imgSrc={"\\Assets\\Products\\pexels-pelageia-zelenina-10390467.jpg"}
-                    prodTitle={'Cheesecake'}
-                    prodPrice={8}
-                    addToCart={addToCart}
-                />
+                {sortingRender.map(({ imgSrc, prodTitle, prodPrice }) => (
+                    <ProductCard
+                        key={uuidv4()}
+                        imgSrc={imgSrc}
+                        prodTitle={prodTitle}
+                        prodPrice={prodPrice}
+                        addToCart={addToCart}
+                    />
+                ))}
             </div>
         </div>
     )
