@@ -8,6 +8,7 @@ import DeletePopup from './Components/DeletePopup/DeletePopup'
 import { useState } from 'react'
 import Products from './pages/Products/Products'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Contact from './pages/Contact/Contact'
 
 function App() {
   const [hideCart, setHideCart] = useState('')
@@ -21,10 +22,10 @@ function App() {
     let catQtyCalc = 0
     if (cart.filter((item) => prodTitle === item.prodTitle).length > 0) {
       let idx = cart.findIndex(prod => prod.prodTitle === prodTitle)
-      if (cart[idx].prodQuantity < 30) {
+      if (cart[idx].prodQuantity < 20) {
         cart[idx].prodQuantity += 1
         cart[idx].priceOneProd = prodPrice
-        cart[idx].prodPrice = (cart[idx].priceOneProd * cart[idx].prodQuantity).toFixed(2)
+        cart[idx].prodPrice = (cart[idx].priceOneProd * cart[idx].prodQuantity).toFixed(1)
       }
     }
     else {
@@ -68,7 +69,7 @@ function App() {
       let catQtyCalc = 0
       let idx = cartItems.findIndex(i => i.prodTitle === prodTitle)
       cart[idx].prodQuantity -= 1
-      cart[idx].prodPrice = (cart[idx].priceOneProd * cart[idx].prodQuantity).toFixed(2)
+      cart[idx].prodPrice = (cart[idx].priceOneProd * cart[idx].prodQuantity).toFixed(1)
       cart.forEach(prod => catQtyCalc += prod.prodQuantity)
       setCartQty(catQtyCalc)
       setCartItems(cart)
@@ -81,7 +82,7 @@ function App() {
       let catQtyCalc = 0
       let idx = cartItems.findIndex(i => i.prodTitle === prodTitle)
       cart[idx].prodQuantity += 1
-      cart[idx].prodPrice = (cart[idx].priceOneProd * cart[idx].prodQuantity).toFixed(2)
+      cart[idx].prodPrice = (cart[idx].priceOneProd * cart[idx].prodQuantity).toFixed(1)
       cart.forEach(prod => catQtyCalc += prod.prodQuantity)
       setCartQty(catQtyCalc)
       setCartItems(cart)
@@ -98,6 +99,8 @@ function App() {
     setCartItems(cart)
   }
 
+
+
   return (
     <Router>
       <div className="App">
@@ -105,13 +108,14 @@ function App() {
         <Cart
           hideCart={hideCart} closeCart={closeCart} cartItems={cartItems}
           removeProd={removeProd} addProd={addProd} delProd={delProd}
-          subtotalPrice={subT.reduce((accumulator, currentValue) => accumulator + currentValue, 0)}
+          subtotalPrice={subT.reduce((accumulator, currentValue) => accumulator + currentValue, 0).toFixed(1)}
           subtotalQty={subQty.reduce((accumulator, currentValue) => accumulator + currentValue, 0)}
         />
         <DeletePopup />
         <Routes>
           <Route exact path='/' element={<Home addToCart={addToCart} />} />
-          <Route path='/products' element={<Products addToCart={addToCart}/>} />
+          <Route path='/products' element={<Products addToCart={addToCart} />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
         <Footer />
       </div>

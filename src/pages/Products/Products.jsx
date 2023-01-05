@@ -36,6 +36,30 @@ export default function Products({ addToCart }) {
                     prodPrice={6}
                     addToCart={addToCart}
                 />
+                <ProductCard
+                    imgSrc={"\\Assets\\Products\\pexels-valeria-boltneva-827516.jpg"}
+                    prodTitle={'Raspberry cake'}
+                    prodPrice={5.6}
+                    addToCart={addToCart}
+                />
+                <ProductCard
+                    imgSrc={"\\Assets\\Products\\pexels-valeria-boltneva-1639564.jpg"}
+                    prodTitle={'Vanilla cake with berries'}
+                    prodPrice={5.6}
+                    addToCart={addToCart}
+                />
+                <ProductCard
+                    imgSrc={"\\Assets\\Products\\pexels-erick-mufasa-1414234.jpg"}
+                    prodTitle={'Pink and white cake'}
+                    prodPrice={6}
+                    addToCart={addToCart}
+                />
+                <ProductCard
+                    imgSrc={"\\Assets\\Products\\pexels-pelageia-zelenina-10390467.jpg"}
+                    prodTitle={'Cheesecake'}
+                    prodPrice={8}
+                    addToCart={addToCart}
+                />
             </div>
         </div>
     )

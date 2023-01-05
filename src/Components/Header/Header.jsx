@@ -26,7 +26,7 @@ export default function Header({ cartNum, openCart }) {
                 <ul className={`nav-ul ${showClass}`}>
                     <li><Link className='nav-link' to="/">Home</Link></li>
                     <li><Link className='nav-link' to="/products">Products</Link></li>
-                    <li><a className='nav-link' href="">Contact</a></li>
+                    <li><Link className='nav-link' to="/contact">Contact</Link></li>
                 </ul>
                 <div onClick={menuClick} className='hamburger-button'>
                     <span className='hamburger-lines'></span>
