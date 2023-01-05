@@ -2,11 +2,15 @@ import React from 'react'
 import ProductCard from '../../Components/ProductCard/ProductCard'
 import './Products.css'
 import { useState } from 'react'
+import ProductsList from '..//../Products.json'
 
 export default function Products({ addToCart }) {
 
     const [selected, setSelected] = useState('Price: Low to high')
     const [showSelect, setShowSelect] = useState('hide')
+
+    console.log(ProductsList)
+    console.log(ProductsList.sort((a, b) => a.prodPrice - b.prodPrice),'sorted')
 
     function selectMenu() {
         showSelect === '' ? setShowSelect('hide') : setShowSelect('')
@@ -21,14 +25,13 @@ export default function Products({ addToCart }) {
         <div className='products-page'>
             <h2 className='prod-h2'>Products</h2>
             <div className='custom-select' >
-                <button className='select-btn' onClick={selectMenu}>Sort by: {selected}</button>
+                <button className='select-btn' onClick={selectMenu}>Sort by:<p className='sortby-text'>{selected}</p> </button>
                 <ul className={`products-sorting ${showSelect}`}>
                     <li onClick={setSelect} className='sorting-mode'>Price: Low to high</li>
                     <li onClick={setSelect} className='sorting-mode'>Price: High to low</li>
                     <li onClick={setSelect} className='sorting-mode'>A-Z</li>
                 </ul>
             </div>
-
             <div className='products-container'>
                 <ProductCard
                     imgSrc={"\\Assets\\Trendings\\pexels-abhinav-goswami-291528.jpg"}

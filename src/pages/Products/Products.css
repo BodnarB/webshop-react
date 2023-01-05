@@ -18,34 +18,51 @@
 }
 
 .custom-select {
+    display: flex;
     position: relative;
+    justify-content: flex-end;
 }
 
 .select-btn {
+    display: flex;
+    gap: 0.4rem;
     margin: 1rem;
+    font-size: 0.9rem;
     background-color: white;
-    padding: 0.3rem;
-    border-radius: 0.5rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.sortby-text {
+    font-weight: 500;
 }
 
 .select-btn:hover {
     cursor: pointer;
+    background-color: whitesmoke;
+    transition-duration: 0.2s;
 }
 
 .products-sorting {
     position: absolute;
-    top: 25px;
+    top: 36px;
+    right: 0;
     z-index: 3;
     font-size: 0.9rem;
     font-weight: 500;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     background-color: white;
     width: fit-content;
     margin: 1rem;
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 0.25s;
 }
 
 .sorting-mode {
@@ -55,8 +72,11 @@
 .sorting-mode:hover {
     cursor: pointer;
     background-color: rgb(230, 230, 230);
+    transition-duration: 0.2s;
 }
 
 .products-sorting.hide {
-    display: none;
+    transition-duration: 0.25s;
+    visibility: hidden;
+    opacity: 0;
 }

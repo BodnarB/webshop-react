@@ -1,0 +1,50 @@
+    [
+        {
+            "imgSrc": "\\Assets\\Trendings\\pexels-abhinav-goswami-291528.jpg",
+            "prodTitle": "Extra chocolate cake",
+            "prodPrice": "7",
+            "addToCart": "addToCart"
+        },
+        {
+            "imgSrc": "\\Assets\\Trendings\\pexels-matheus-guimarães-1291712.jpg",
+            "prodTitle": "Forest fruit cake",
+            "prodPrice": "6.5",
+            "addToCart": "addToCart"
+        },
+        {
+            "imgSrc": "\\Assets\\Trendings\\pexels-quang-nguyen-vinh-2144200.jpg",
+            "prodTitle": "Strawberry cream cake",
+            "prodPrice": "7.8",
+            "addToCart": "addToCart"
+        },
+        {
+            "imgSrc": "\\Assets\\Trendings\\pexels-suzy-hazelwood-1126359.jpg",
+            "prodTitle": "Vanilla jelly cake",
+            "prodPrice": "6",
+            "addToCart": "addToCart"
+        },
+        {
+            "imgSrc": "\\Assets\\Products\\pexels-valeria-boltneva-827516.jpg",
+            "prodTitle": "Raspberry cake",
+            "prodPrice": "7.2",
+            "addToCart": "addToCart"
+        },
+        {
+            "imgSrc": "\\Assets\\Products\\pexels-valeria-boltneva-1639564.jpg",
+            "prodTitle": "Vanilla cake with berries",
+            "prodPrice": "7",
+            "addToCart": "addToCart"
+        },
+        {
+            "imgSrc": "\\Assets\\Products\\pexels-erick-mufasa-1414234.jpg",
+            "prodTitle": "Pink and white cake",
+            "prodPrice": "6",
+            "addToCart": "addToCart"
+        },
+        {
+            "imgSrc": "\\Assets\\Products\\pexels-pelageia-zelenina-10390467.jpg",
+            "prodTitle": "Cheesecake",
+            "prodPrice": "7.9",
+            "addToCart": "addToCart"
+        }
+    ]

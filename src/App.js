@@ -47,22 +47,6 @@ function App() {
     hideCart === '' ? setHideCart('show-cart') : setHideCart('')
   }
 
-  // useEffect(() => {
-  //   if (hideCart !== '') {
-  //     let scrollPosition = window.scrollY
-  //     document.body.classList.add('scroll-disable')
-  //     document.body.style.top = `-${scrollPosition}px`
-  //   }
-  //   else {
-  //     let scrollValue = Math.abs(parseInt(document.body.style.top))
-  //     document.body.classList.remove('scroll-disable')
-  //     window.scrollTo({
-  //       top: scrollValue,
-  //       behavior: 'instant'
-  //     })
-  //   }
-  // }, [hideCart])
-
   function removeProd(prodTitle, prodQuantity) {
     if (prodQuantity > 1) {
       let cart = [...cartItems]
