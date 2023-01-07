@@ -12,6 +12,10 @@ export default function Header({ cartNum, openCart }) {
         showClass === '' ? setShowClass('show') : setShowClass('')
     }
 
+    function hideMenu() {
+        setShowClass('')
+    }
+
     return (
         <header>
             <div className='header-cart-container' onClick={openCart}>
@@ -24,9 +28,9 @@ export default function Header({ cartNum, openCart }) {
             </Link>
             <nav>
                 <ul className={`nav-ul ${showClass}`}>
-                    <li><Link className='nav-link' to="/">Home</Link></li>
-                    <li><Link className='nav-link' to="/products">Products</Link></li>
-                    <li><Link className='nav-link' to="/contact">Contact</Link></li>
+                    <li onClick={hideMenu}><Link className='nav-link' to="/">Home</Link></li>
+                    <li onClick={hideMenu}><Link className='nav-link' to="/products">Products</Link></li>
+                    <li onClick={hideMenu}><Link className='nav-link' to="/contact">Contact</Link></li>
                 </ul>
                 <div onClick={menuClick} className='hamburger-button'>
                     <span className='hamburger-lines'></span>

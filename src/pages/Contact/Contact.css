@@ -1,0 +1,29 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    gap: 1rem;
+    background: transparent;
+}
+
+.form-input,
+.btn-submit {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.btn-submit {
+    background-color: #ab4e68;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.contact-h2 {
+    font-size: 2rem;
+    font-family: 'Caveat', cursive;
+    margin: 1rem;
+}

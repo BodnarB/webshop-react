@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-import illustration from '../../Assets/jason-dent-uQe0o0Ub2Cs-unsplash.jpg'
+import illustration from '../../Assets/homecover.avif'
 import Trendings from '../Trendings/Trendings'
 
 export default function Home({ addToCart, prodTitle }) {
