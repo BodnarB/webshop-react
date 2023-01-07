@@ -19,7 +19,7 @@ export default function Cart({ closeCart, hideCart, cartItems, removeProd, addPr
                 }
                 <CartItem cartItems={cartItems} removeProd={removeProd} addProd={addProd} delProd={delProd} />
             </div>
-            {subtotalQty != 0 &&
+            {subtotalQty !== 0 &&
                 <>
                     <div className='cart-sum'>
                         <p className='subtotal-text'>Subtotal ({subtotalQty} {subtotalQty === 1 ? <>item</> : <>items</>}):</p>

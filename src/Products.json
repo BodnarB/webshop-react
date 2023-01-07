@@ -1,48 +1,48 @@
     [
         {
-            "imgSrc": "\\Assets\\Trendings\\pexels-abhinav-goswami-291528.jpg",
+            "imgSrc": "\\Assets\\Products\\001.avif",
             "prodTitle": "Extra chocolate cake",
             "prodPrice": "7",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "\\Assets\\Trendings\\pexels-matheus-guimarães-1291712.jpg",
+            "imgSrc": "\\Assets\\Products\\002.avif",
             "prodTitle": "Forest fruit cake",
             "prodPrice": "6.5",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "\\Assets\\Trendings\\pexels-quang-nguyen-vinh-2144200.jpg",
+            "imgSrc": "\\Assets\\Products\\004.avif",
             "prodTitle": "Strawberry cream cake",
             "prodPrice": "7.8",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "\\Assets\\Trendings\\pexels-suzy-hazelwood-1126359.jpg",
+            "imgSrc": "\\Assets\\Products\\003.avif",
             "prodTitle": "Vanilla jelly cake",
             "prodPrice": "6",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "\\Assets\\Products\\pexels-valeria-boltneva-827516.jpg",
+            "imgSrc": "\\Assets\\Products\\005.avif",
             "prodTitle": "Raspberry cake",
             "prodPrice": "7.2",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "\\Assets\\Products\\pexels-valeria-boltneva-1639564.jpg",
+            "imgSrc": "\\Assets\\Products\\006.avif",
             "prodTitle": "Vanilla cake with berries",
             "prodPrice": "7",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "\\Assets\\Products\\pexels-erick-mufasa-1414234.jpg",
+            "imgSrc": "\\Assets\\Products\\007.avif",
             "prodTitle": "Pink and white cake",
             "prodPrice": "6",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "\\Assets\\Products\\pexels-pelageia-zelenina-10390467.jpg",
+            "imgSrc": "\\Assets\\Products\\008.avif",
             "prodTitle": "Cheesecake",
             "prodPrice": "12.9",
             "addToCart": "addToCart"
