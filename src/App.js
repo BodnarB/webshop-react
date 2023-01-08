@@ -3,7 +3,6 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
 import Footer from './Components/Footer/Footer'
-import DeletePopup from './Components/DeletePopup/DeletePopup'
 import { useState } from 'react'
 import Products from './pages/Products/Products'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
@@ -61,7 +60,7 @@ function App() {
   }
 
   function addProd(prodTitle, prodQuantity) {
-    if (prodQuantity < 30) {
+    if (prodQuantity < 20) {
       let cart = [...cartItems]
       let catQtyCalc = 0
       let idx = cartItems.findIndex(i => i.prodTitle === prodTitle)
@@ -89,7 +88,6 @@ function App() {
     <Router>
       <div className="App">
         <Header cartNum={cartQty} openCart={closeCart} />
-        <DeletePopup />
         <Routes>
           <Route exact path='/' element={<Home addToCart={addToCart} />} />
           <Route path='/cart' element={<CartPage
