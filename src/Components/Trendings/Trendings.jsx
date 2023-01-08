@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 export default function Trendings({ addToCart, prodTitle }) {
     return (
         <div className='trendings-container'>
-            <h3>Best seller products</h3>
+            <h3 className='trendings-h3'>Best seller products</h3>
             <div className='trending-img-container'>
                 {ProductsList.slice(2, 6).map(({ imgSrc, prodTitle, prodPrice }) => (
                     <ProductCard

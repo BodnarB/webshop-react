@@ -1,4 +1,4 @@
-h3 {
+.trendings-h3 {
     font-size: 1.6rem;
     font-weight: 500;
     margin: 0 1rem;
@@ -6,8 +6,6 @@ h3 {
 }
 
 .trendings-container {
-    background-color: #f0efef;
-    color: rgb(0, 0, 0);
     padding: 1rem 0;
 }
 
@@ -17,6 +15,7 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.4rem;
+    transition-duration: 0.3s;
 }
 
 .trending-btn {
@@ -40,4 +39,23 @@ h3 {
     background-color: rgb(46, 46, 46);
     cursor: pointer;
     transition-duration: 0.3s;
+}
+
+@media (min-width: 576px) {
+
+    .trendings-container {
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .trending-img-container  {
+        gap: 1rem;
+    }
+
+    .trendings-h3 {
+        font-size: 1.9rem;
+        margin: 1rem 1rem 2rem;
+    }
+
 }

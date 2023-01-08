@@ -58,3 +58,9 @@
     background-color: antiquewhite;
     transition-duration: 0.25s;
 }
+
+@media (min-width: 576px) {
+    .prod-card {
+        max-width: 270px;
+    }
+}

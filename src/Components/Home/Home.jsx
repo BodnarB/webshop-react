@@ -13,7 +13,9 @@ export default function Home({ addToCart, prodTitle }) {
             <p className='intro-text'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Exercitationem, harum! Rem optio quis expedita quam repellat labore sunt?
                 Laboriosam incidunt dicta inventore dolore. Vitae, quibusdam?</p>
-            <Trendings addToCart={addToCart} prodTitle={prodTitle} />
+            <section className='trendings-section'>
+                <Trendings addToCart={addToCart} prodTitle={prodTitle} />
+            </section>
         </main>
     )
 }
