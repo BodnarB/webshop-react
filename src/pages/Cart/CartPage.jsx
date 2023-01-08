@@ -1,20 +1,20 @@
 import React from 'react'
-import './Cart.css'
-import CartItem from '../CartItem/CartItem'
+import './CartPage.css'
+import CartItem from '../../Components/CartItem/CartItem'
 import EmptyCartImg from '../../Assets/emptycart.png'
+import { Link } from 'react-router-dom'
+import Arrow from '../../Assets/angles-right-solid.svg'
 
-export default function Cart({ closeCart, hideCart, cartItems, removeProd, addProd, delProd, subtotalPrice, subtotalQty }) {
-
+export default function CartPage({ closeCart, hideCart, cartItems, removeProd, addProd, delProd, subtotalPrice, subtotalQty }) {
     return (
-        <div className={`cart-container ${hideCart}`}>
-            <div className='cart-header'>
-                <p>Cart</p>
-                <button onClick={closeCart} className='cart-close-btn'>X</button>
-            </div>
+        <div className='cart-page'>
+            <h2 className='cart-h2'>Cart</h2>
             <div className='cart-list'>
                 {cartItems.length === 0 &&
                     <div className='empty-cart-container'>
-                        <img src={EmptyCartImg} alt="" /><p className='empty-cart'>Your cart is empty</p>
+                        <img src={EmptyCartImg} alt="" />
+                        <p className='empty-cart'>Your cart is empty</p>
+                        <Link to='/products'><button className='products-btn'>Products <img className='arrow-icon' src={Arrow} alt="" /></button></Link>
                     </div>
                 }
                 <CartItem cartItems={cartItems} removeProd={removeProd} addProd={addProd} delProd={delProd} />
@@ -31,3 +31,4 @@ export default function Cart({ closeCart, hideCart, cartItems, removeProd, addPr
         </div>
     )
 }
+

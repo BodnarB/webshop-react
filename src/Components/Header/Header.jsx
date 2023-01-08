@@ -18,10 +18,12 @@ export default function Header({ cartNum, openCart }) {
 
     return (
         <header>
-            <div className='header-cart-container' onClick={openCart}>
-                <img className='header-cart-img' src={Cart} alt="" />
-                <p className='header-cart-text'>{cartNum}</p>
-            </div>
+            <Link to='/cart'>
+                <div className='header-cart-container'>
+                    <img className='header-cart-img' src={Cart} alt="" />
+                    <p className='header-cart-text'>{cartNum}</p>
+                </div>
+            </Link>
             <Link className='logo-container' to="/">
                 <p className='logo-text'>Cake shop</p>
                 <img className='logo-img' src={Logo} alt="" />

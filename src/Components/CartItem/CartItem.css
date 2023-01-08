@@ -1,9 +1,10 @@
 .cart-item {
     display: flex;
     gap: 0.5rem;
-    background-color: rgba(10, 10, 10);
-    border-radius: 0.15rem;
-    font-weight: 300;
+    background-color: rgba(10, 10, 10, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    font-weight: 400;
     line-height: normal;
 }
 

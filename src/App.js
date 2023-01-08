@@ -3,12 +3,12 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
 import Footer from './Components/Footer/Footer'
-import Cart from './Components/Cart/Cart'
 import DeletePopup from './Components/DeletePopup/DeletePopup'
 import { useState } from 'react'
 import Products from './pages/Products/Products'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Contact from './pages/Contact/Contact'
+import CartPage from './pages/Cart/CartPage'
 
 function App() {
   const [hideCart, setHideCart] = useState('')
@@ -89,15 +89,14 @@ function App() {
     <Router>
       <div className="App">
         <Header cartNum={cartQty} openCart={closeCart} />
-        <Cart
-          hideCart={hideCart} closeCart={closeCart} cartItems={cartItems}
-          removeProd={removeProd} addProd={addProd} delProd={delProd}
-          subtotalPrice={subT.reduce((accumulator, currentValue) => accumulator + currentValue, 0).toFixed(1)}
-          subtotalQty={subQty.reduce((accumulator, currentValue) => accumulator + currentValue, 0)}
-        />
         <DeletePopup />
         <Routes>
           <Route exact path='/' element={<Home addToCart={addToCart} />} />
+          <Route path='/cart' element={<CartPage
+            cartItems={cartItems}
+            removeProd={removeProd} addProd={addProd} delProd={delProd}
+            subtotalPrice={subT.reduce((accumulator, currentValue) => accumulator + currentValue, 0).toFixed(1)}
+            subtotalQty={subQty.reduce((accumulator, currentValue) => accumulator + currentValue, 0)} />} />
           <Route path='/products' element={<Products addToCart={addToCart} />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
