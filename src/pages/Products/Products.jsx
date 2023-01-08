@@ -4,11 +4,12 @@ import './Products.css'
 import { useState, useEffect } from 'react'
 import ProductsList from '..//../Products.json'
 import { v4 as uuidv4 } from 'uuid';
+import arrowIcon from '../../Assets/arrow-down.svg'
 
 export default function Products({ addToCart }) {
-
     const [selected, setSelected] = useState('Price: Low to high')
     const [showSelect, setShowSelect] = useState('hide')
+    const [arrow, setArrow] = useState('')
     let ProductsAscending = [...ProductsList].sort((a, b) => a.prodPrice - b.prodPrice)
     let ProductsDescending = [...ProductsList].sort((a, b) => b.prodPrice - a.prodPrice)
     let ProductsAZ = [...ProductsList].sort((a, b) => {
@@ -24,6 +25,7 @@ export default function Products({ addToCart }) {
 
     function selectMenu() {
         showSelect === '' ? setShowSelect('hide') : setShowSelect('')
+        showSelect === 'hide' ? setArrow('turn-arrow') : setArrow('')
     }
 
     function setSelect(e) {
@@ -49,7 +51,10 @@ export default function Products({ addToCart }) {
         <div className='products-page'>
             <h2 className='prod-h2'>Products</h2>
             <div className='custom-select' >
-                <button className='select-btn' onClick={selectMenu}>Sort by:<p className='sortby-text'>{selected}</p> </button>
+                <button className='select-btn' onClick={selectMenu}>
+                    Sort by:<p className='sortby-text'>{selected}</p>
+                    <img className={`sorting-arrow ${arrow}`} src={arrowIcon} alt="" />
+                </button>
                 <ul className={`products-sorting ${showSelect}`}>
                     <li onClick={setSelect} className='sorting-mode'>Price: Low to high</li>
                     <li onClick={setSelect} className='sorting-mode'>Price: High to low</li>
