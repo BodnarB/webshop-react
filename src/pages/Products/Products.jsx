@@ -49,7 +49,10 @@ export default function Products({ addToCart }) {
 
     return (
         <div className='products-page'>
-            <h2 className='prod-h2'>Products</h2>
+            <div className='products-cover-container'>
+                <img className='products-page-cover' src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="" />
+                <h2 className='prod-h2'>Products</h2>
+            </div>
             <div className='custom-select' >
                 <button className='select-btn' onClick={selectMenu}>
                     Sort by:<p className='sortby-text'>{selected}</p>

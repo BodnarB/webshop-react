@@ -2,7 +2,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 1rem 0.5rem;
     background-color: rgb(27, 27, 27);
     color: whitesmoke;
@@ -11,7 +11,7 @@ footer {
 
 .social-container {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .social-logo {
@@ -24,4 +24,19 @@ footer {
     cursor: pointer;
     transition-duration: 0.2s;
     background-color: rgb(192, 176, 176);
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-nav-link {
+   line-height: 1;
+   display: block;
+}
+
+.footer-nav-link:hover {
+    color: #d392a5;
+    transition-duration: 0.2s;
 }

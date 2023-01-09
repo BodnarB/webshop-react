@@ -15,7 +15,7 @@ main {
     display: block;
     opacity: 0.3;
     filter: blur(2px);
-    max-height: 250px;
+    max-height: 190px;
     width: 100%;
     object-fit: cover;
 }
@@ -23,6 +23,10 @@ main {
 .intro-img-fade {
     position: relative;
     background: linear-gradient(rgb(5, 3, 0) 60%, rgb(221, 133, 0) 100%);
+}
+
+.intro-shop-img {
+    display: block;
 }
 
 .main-title {

@@ -9,7 +9,7 @@
     flex-direction: column;
     border-radius: 1rem;
     width: 90%;
-    margin: 0 auto;
+    margin: 2rem auto;
     overflow: hidden;
     gap: 1rem;
     background: transparent;
@@ -36,7 +36,13 @@
 }
 
 .contact-h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
+    font-family: 'Caveat', cursive;
+    margin: 1rem;
+}
+
+.contact-h3 {
+    font-size: 1.55rem;
     font-family: 'Caveat', cursive;
     margin: 1rem;
 }
@@ -65,10 +71,6 @@
     display: flex;
     gap: 0.7rem;
     align-items: center;
-}
-
-.contact-h3 {
-    margin: 1rem;
 }
 
 .contact-icons {
