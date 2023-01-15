@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/webshop-react/static/css/main.5de05b42.css",
+    "main.js": "/webshop-react/static/js/main.f023070c.js",
+    "static/media/homecover.avif": "/webshop-react/static/media/homecover.0fda2f8f12a2b4ef1b28.avif",
+    "static/media/logo.svg": "/webshop-react/static/media/logo.57dca9a4503ad246837895429d747d8b.svg",
+    "static/media/wave.svg": "/webshop-react/static/media/wave.cbdfadb1e1117e4c045b2f1412c03cb4.svg",
+    "static/media/insta.svg": "/webshop-react/static/media/insta.4d969dd141d389ed7a2fe7584b56d681.svg",
+    "static/media/envelope-at-fill.svg": "/webshop-react/static/media/envelope-at-fill.e1ae07e30da283b15e87d858ed142e55.svg",
+    "static/media/yt.svg": "/webshop-react/static/media/yt.85c2f09d0ead35313e7bb2812e3c66f5.svg",
+    "index.html": "/webshop-react/index.html",
+    "static/media/trash3.svg": "/webshop-react/static/media/trash3.fa639c873f5aa7157aff04504781be80.svg",
+    "static/media/angles-right-solid.svg": "/webshop-react/static/media/angles-right-solid.4b4e48a2c5f8e8c35ce65eabf58eec9e.svg",
+    "static/media/telephone.svg": "/webshop-react/static/media/telephone.92e390f92427328323834e1b8ab89138.svg",
+    "static/media/facebook.svg": "/webshop-react/static/media/facebook.4d4460260f64103d8da4a91d8e856d36.svg",
+    "static/media/bagfill.svg": "/webshop-react/static/media/bagfill.6189ebda38f1fc1182c8efbde8de2fc8.svg",
+    "static/media/arrow-down.svg": "/webshop-react/static/media/arrow-down.27c49128156891d28b6305f401c30063.svg",
+    "static/media/plus-lg.svg": "/webshop-react/static/media/plus-lg.9f3ead514076c9a90256403930e4739e.svg",
+    "static/media/geo-alt-fill.svg": "/webshop-react/static/media/geo-alt-fill.94c6a40d70da7b868b3ef5f3020a41d5.svg",
+    "static/media/dash-lg.svg": "/webshop-react/static/media/dash-lg.eb355a3e883ed36e5ebe690839e3b4c4.svg",
+    "main.5de05b42.css.map": "/webshop-react/static/css/main.5de05b42.css.map",
+    "main.f023070c.js.map": "/webshop-react/static/js/main.f023070c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5de05b42.css",
+    "static/js/main.f023070c.js"
+  ]
+}
