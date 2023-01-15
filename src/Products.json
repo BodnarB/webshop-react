@@ -1,48 +1,48 @@
     [
         {
-            "imgSrc": "./Assets/Products/001.avif",
+            "imgSrc": "../Assets/Products/001.avif",
             "prodTitle": "Extra chocolate cake",
             "prodPrice": "7",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "./Assets/Products/002.avif",
+            "imgSrc": "../Assets/Products/002.avif",
             "prodTitle": "Forest fruit cake",
             "prodPrice": "6.5",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "./Assets/Products/004.avif",
+            "imgSrc": "../Assets/Products/004.avif",
             "prodTitle": "Strawberry cream cake",
             "prodPrice": "7.8",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "./Assets/Products/003.avif",
+            "imgSrc": "../Assets/Products/003.avif",
             "prodTitle": "Vanilla jelly cake",
             "prodPrice": "6",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "./Assets/Products/005.avif",
+            "imgSrc": "../Assets/Products/005.avif",
             "prodTitle": "Raspberry cake",
             "prodPrice": "7.2",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "./Assets/Products/006.avif",
+            "imgSrc": "../Assets/Products/006.avif",
             "prodTitle": "Vanilla cake with berries",
             "prodPrice": "7",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "./Assets/Products/007.avif",
+            "imgSrc": "../Assets/Products/007.avif",
             "prodTitle": "Pink and white cake",
             "prodPrice": "6",
             "addToCart": "addToCart"
         },
         {
-            "imgSrc": "./Assets/Products/008.avif",
+            "imgSrc": "../Assets/Products/008.avif",
             "prodTitle": "Cheesecake",
             "prodPrice": "12.9",
             "addToCart": "addToCart"
