@@ -10,7 +10,7 @@ export default function CartItem({ cartItems, removeProd, addProd, delProd }) {
             {cartItems.map((element, index) => {
                 return (
                     <div key={index} className='cart-item' >
-                        <img className='prod-img' src={element.imgSrc} alt="" />
+                        <img className='prod-img' src={process.env.PUBLIC_URL + element.imgSrc} alt="" />
                         <div className='cart-right-container'>
                             <div className='cart-prod-text-container'>
                                 <p className='cart-item-name'>{element.prodTitle}</p>
