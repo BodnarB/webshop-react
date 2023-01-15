@@ -7,7 +7,7 @@ import mailIcon from '../../Assets/envelope-at-fill.svg'
 export default function Contact() {
     return (
         <>
-            <img className='contact-cover' src="./Assets/cover.avif" alt="" />
+            <img className='contact-cover' src={process.env.PUBLIC_URL + "/Assets/cover.avif"} alt="" />
             <h2 className='contact-h2'>Contact</h2>
             <div className='contact-w-map'>
                 <div className='contact-container'>
@@ -25,7 +25,7 @@ export default function Contact() {
                     </div>
                 </div>
                 <iframe className='google-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155455.27832596673!2d-2.0284358496915655!3d52.497443701163746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870942d1b417173%3A0xca81fef0aeee7998!2zQmlybWluZ2hhbSwgRWd5ZXPDvGx0IEtpcsOhbHlzw6Fn!5e0!3m2!1shu!2shu!4v1673098453488!5m2!1shu!2shu"
-                     loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div className='form-w-title'>
                 <div className='backdrop'>
