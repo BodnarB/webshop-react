@@ -1,8 +1,9 @@
 .trendings-h3 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    margin: 0 1rem;
-    font-family: 'Caveat', cursive;
+    margin: 1rem 1rem 2rem;
+    font-family: 'Merienda', cursive;
+    color: rgb(44, 44, 44);
 }
 
 .trendings-container {
@@ -18,7 +19,10 @@
 }
 
 .trending-btn {
-    padding: 0.5rem 0.8rem;
+    padding: 0.5rem 1rem;
+    width: 80%;
+    max-width: 250px;
+    justify-content: center;
     background-color: #AB4E68;
     color: #ffffff;
     font-weight: 500;
@@ -42,6 +46,10 @@
 
 @media (min-width: 576px) {
 
+    .arrow-icon {
+        margin-top: 0.15rem;
+    }
+
     .trendings-container {
         max-width: 1200px;
         width: 90%;
@@ -50,19 +58,19 @@
 
     .trending-img-container {
         gap: 1rem;
-        max-width: 800px;
-        margin: 0 auto;
+        margin: 3rem auto;
     }
 
     .trendings-h3 {
-        font-size: 1.9rem;
+        font-size: 1.5rem;
         margin: 1rem 1rem 2rem;
     }
 
-}
-
-@media (min-width: 1276px) {
-    .trending-img-container {
-        max-width: 100%;
+    .trending-btn {
+        font-size: 1.1rem;
+        font-weight: 400;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     }
+
 }

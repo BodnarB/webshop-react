@@ -64,3 +64,9 @@
         max-width: 270px;
     }
 }
+
+@media (min-width: 768px) { 
+    .prod-card {
+        max-width: 23%;
+    }
+ }

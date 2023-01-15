@@ -1,3 +1,8 @@
+.contact-width {
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
 .contact-cover {
     height: 160px;
     width: 100%;
@@ -9,7 +14,8 @@
     flex-direction: column;
     border-radius: 1rem;
     width: 90%;
-    margin: 2rem auto;
+    max-width: 550px;
+    margin: 0 auto;
     overflow: hidden;
     gap: 1rem;
     background: transparent;
@@ -36,19 +42,20 @@
 }
 
 .contact-h2 {
-    font-size: 1.9rem;
-    font-family: 'Caveat', cursive;
+    font-size: 1.6rem;
+    font-family: 'Merienda', cursive;
     margin: 1rem;
 }
 
 .contact-h3 {
-    font-size: 1.55rem;
-    font-family: 'Caveat', cursive;
-    margin: 1rem;
+    font-size: 1.4rem;
+    font-family: 'Merienda', cursive;
+    margin: 1rem 1rem 2rem;
 }
 
 .google-map {
     width: 90%;
+    max-width: 600px;
     display: block;
     margin: 2rem auto;
     border-radius: 1rem;
@@ -75,4 +82,35 @@
 
 .contact-icons {
     height: 20px;
+}
+
+.form-w-title {
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-image: url(https://images.pexels.com/photos/3913295/pexels-photo-3913295.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.backdrop {
+    padding: 1rem 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 576px) {
+
+    .contact-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .contact-cover {
+        height: 250px;
+    }
+
 }
