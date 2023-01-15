@@ -5,7 +5,7 @@ import Home from './Components/Home/Home'
 import Footer from './Components/Footer/Footer'
 import { useState } from 'react'
 import Products from './pages/Products/Products'
-import { HashRouter, HashRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter as HashRouter, Route, Routes } from 'react-router-dom'
 import Contact from './pages/Contact/Contact'
 import CartPage from './pages/Cart/CartPage'
 
