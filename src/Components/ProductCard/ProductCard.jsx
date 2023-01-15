@@ -3,7 +3,7 @@ import './ProductCard.css'
 import cartImg from '../../Assets/bagfill.svg'
 
 export default function ProductCard({ imgSrc, prodTitle, prodPrice, addToCart }) {
-    console.log(imgSrc)
+
     return (
         <div className='prod-card'>
             <img className='trending-img' src={process.env.PUBLIC_URL + imgSrc} alt="" />
