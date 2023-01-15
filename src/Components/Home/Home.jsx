@@ -23,6 +23,18 @@ export default function Home({ addToCart, prodTitle }) {
             <section className='trendings-section'>
                 <Trendings addToCart={addToCart} prodTitle={prodTitle} />
             </section>
+            <section className='history-section'>
+                <div className='history-container'>
+                    <div>
+                        <h3 className='h3-history'>Our history</h3>
+                        <p className='intro-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit eligendi eius optio porro aspernatur,
+                            molestias fugit sint. Iusto atque et iure illo autem repudiandae quas quaerat, eligendi possimus velit porro laborum odit,
+                            esse voluptatum est laboriosam! Architecto culpa excepturi, consequatur quam labore eius, explicabo est alias tempora beatae
+                            quo quaerat!</p>
+                    </div>
+                    <img className='history-img' src="https://images.pexels.com/photos/6210908/pexels-photo-6210908.jpeg" alt="" />
+                </div>
+            </section>
         </main>
     )
 }
