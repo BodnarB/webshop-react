@@ -5,8 +5,6 @@ import Cart from '../../Assets/bagfill.svg'
 import { Link } from 'react-router-dom'
 
 export default function Header({ cartNum, openCart }) {
-
-
     const [showClass, setShowClass] = useState('')
     function menuClick() {
         showClass === '' ? setShowClass('show') : setShowClass('')
@@ -19,7 +17,7 @@ export default function Header({ cartNum, openCart }) {
     return (
         <header>
             <Link to='/cart'>
-                <div className='header-cart-container'>
+                <div className='header-cart-container' onClick={hideMenu}>
                     <img className='header-cart-img' src={Cart} alt="" />
                     <p className='header-cart-text'>{cartNum}</p>
                 </div>

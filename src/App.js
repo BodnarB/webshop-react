@@ -82,8 +82,6 @@ function App() {
     setCartItems(cart)
   }
 
-
-
   return (
     <Router>
       <div className="App">
