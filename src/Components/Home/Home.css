@@ -13,7 +13,7 @@ main {
 .intro-img {
     display: block;
     opacity: 0.3;
-    filter: blur(2px);
+    filter: blur(1px);
     max-height: 190px;
     width: 100%;
     object-fit: cover;
