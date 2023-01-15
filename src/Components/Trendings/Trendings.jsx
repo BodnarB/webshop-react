@@ -14,7 +14,7 @@ export default function Trendings({ addToCart, prodTitle }) {
                 {ProductsList.slice(2, 6).map(({ imgSrc, prodTitle, prodPrice }) => (
                     <ProductCard
                         key={uuidv4()}
-                        imgSrc={process.env.PUBLIC_URL + imgSrc}
+                        imgSrc={imgSrc}
                         prodTitle={prodTitle}
                         prodPrice={prodPrice}
                         addToCart={addToCart}

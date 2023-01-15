@@ -14,7 +14,6 @@ export default function CartItem({ cartItems, removeProd, addProd, delProd }) {
                         <div className='cart-right-container'>
                             <div className='cart-prod-text-container'>
                                 <p className='cart-item-name'>{element.prodTitle}</p>
-
                             </div>
                             <div className='prod-img-qty-container'>
                                 <p className='prod-price'>{element.prodPrice} $</p>
