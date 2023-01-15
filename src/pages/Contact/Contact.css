@@ -15,7 +15,7 @@
     border-radius: 1rem;
     width: 90%;
     max-width: 550px;
-    margin: 0 auto;
+    margin: 2rem auto;
     overflow: hidden;
     gap: 1rem;
     background: transparent;
@@ -23,15 +23,23 @@
 
 .form-input,
 .btn-submit {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+.form-input:focus {
+    outline: none;
+    background-color: rgba(87, 87, 87, 0.6);
 }
 
 .btn-submit {
     background-color: #ab4e68;
     color: white;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     transition-duration: 0.25s;
 }
 
@@ -88,8 +96,9 @@
     color: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
     overflow: hidden;
-    background-image: url(https://images.pexels.com/photos/3913295/pexels-photo-3913295.jpeg);
+    background-image: url(https://images.pexels.com/photos/1639566/pexels-photo-1639566.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -97,10 +106,17 @@
 
 .backdrop {
     padding: 1rem 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.45);
 }
 
 @media (min-width: 576px) {
+
+    .contact-h2,
+    .contact-h3 {
+        width: 90%;
+        max-width: 1100px;
+        margin: 2rem auto;
+    }
 
     .contact-container {
         flex-direction: row;
