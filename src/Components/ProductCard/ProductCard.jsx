@@ -7,7 +7,8 @@ export default function ProductCard({ imgSrc, prodTitle, prodPrice, addToCart })
     return (
         <div className='prod-card'>
             <img className='trending-img'
-                src={'.' + process.env.PUBLIC_URL + imgSrc}
+                // src={process.env.PUBLIC_URL + imgSrc}
+                src={imgSrc}
                 alt="" />
             <div className='prod-info-box'>
                 <p className='prod-title'>{prodTitle}</p>
