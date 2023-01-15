@@ -5,7 +5,7 @@ import Home from './Components/Home/Home'
 import Footer from './Components/Footer/Footer'
 import { useState } from 'react'
 import Products from './pages/Products/Products'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter, HashRouter as Router, Route, Routes } from 'react-router-dom'
 import Contact from './pages/Contact/Contact'
 import CartPage from './pages/Cart/CartPage'
 
@@ -83,7 +83,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <HashRouter>
       <div className="App">
         <Header cartNum={cartQty} openCart={closeCart} />
         <Routes>
@@ -99,7 +99,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
