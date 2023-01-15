@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/webshop-react/static/css/main.5de05b42.css",
-    "main.js": "/webshop-react/static/js/main.b2876257.js",
+    "main.js": "/webshop-react/static/js/main.0b99c34e.js",
     "static/media/homecover.avif": "/webshop-react/static/media/homecover.0fda2f8f12a2b4ef1b28.avif",
     "static/media/logo.svg": "/webshop-react/static/media/logo.57dca9a4503ad246837895429d747d8b.svg",
     "static/media/wave.svg": "/webshop-react/static/media/wave.cbdfadb1e1117e4c045b2f1412c03cb4.svg",
@@ -19,10 +19,10 @@
     "static/media/geo-alt-fill.svg": "/webshop-react/static/media/geo-alt-fill.94c6a40d70da7b868b3ef5f3020a41d5.svg",
     "static/media/dash-lg.svg": "/webshop-react/static/media/dash-lg.eb355a3e883ed36e5ebe690839e3b4c4.svg",
     "main.5de05b42.css.map": "/webshop-react/static/css/main.5de05b42.css.map",
-    "main.b2876257.js.map": "/webshop-react/static/js/main.b2876257.js.map"
+    "main.0b99c34e.js.map": "/webshop-react/static/js/main.0b99c34e.js.map"
   },
   "entrypoints": [
     "static/css/main.5de05b42.css",
-    "static/js/main.b2876257.js"
+    "static/js/main.0b99c34e.js"
   ]
 }
