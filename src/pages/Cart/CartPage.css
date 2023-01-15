@@ -1,3 +1,12 @@
+.cart-page {
+    background-color: #f8f3ed;
+}
+
+.empty-cart {
+    text-align: center;
+    margin: 1rem 0;
+}
+
 .cart-h2 {
     font-size: 1.6rem;
     font-family: 'Merienda', cursive;
@@ -40,7 +49,6 @@
     cursor: pointer;
     transition-duration: 0.3s;
 }
-
 
 .cart-sum {
     display: flex;
@@ -85,12 +93,19 @@
     width: fit-content;
 }
 
+.trendings-cart {
+    background-color: rgb(228, 222, 222);
+    padding: 2.5rem 0;
+}
+
 @media (min-width: 576px) { 
 
     .cart-flex {
         display: flex;
         gap: 1rem;
         padding: 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
     }
 
 }

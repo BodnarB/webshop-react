@@ -2,10 +2,9 @@ import React from 'react'
 import './CartPage.css'
 import CartItem from '../../Components/CartItem/CartItem'
 import EmptyCartImg from '../../Assets/emptycart.png'
-import { Link } from 'react-router-dom'
-import Arrow from '../../Assets/angles-right-solid.svg'
+import Trendings from '../../Components/Trendings/Trendings'
 
-export default function CartPage({ closeCart, hideCart, cartItems, removeProd, addProd, delProd, subtotalPrice, subtotalQty }) {
+export default function CartPage({ cartItems, removeProd, addProd, delProd, subtotalPrice, subtotalQty, addToCart, prodTitle }) {
     return (
         <div className='cart-page'>
             <h2 className='cart-h2'>Cart</h2>
@@ -14,8 +13,7 @@ export default function CartPage({ closeCart, hideCart, cartItems, removeProd, a
                     {cartItems.length === 0 &&
                         <div className='empty-cart-container'>
                             <img src={EmptyCartImg} alt="" />
-                            <p className='empty-cart'>Your cart is empty</p>
-                            <Link to='/products'><button className='products-btn'>Products <img className='arrow-icon' src={Arrow} alt="" /></button></Link>
+                            <p className='empty-cart'>Your cart is empty, maybe check our fancy cakes.</p>
                         </div>
                     }
                     <CartItem cartItems={cartItems} removeProd={removeProd} addProd={addProd} delProd={delProd} />
@@ -29,6 +27,9 @@ export default function CartPage({ closeCart, hideCart, cartItems, removeProd, a
                         <button className='checkout-btn'>Proceed to Checkout</button>
                     </div>
                 }
+            </div>
+            <div className='trendings-cart'>
+                <Trendings addToCart={addToCart} prodTitle={prodTitle} />
             </div>
         </div>
     )

@@ -94,7 +94,8 @@ function App() {
             cartItems={cartItems}
             removeProd={removeProd} addProd={addProd} delProd={delProd}
             subtotalPrice={subT.reduce((accumulator, currentValue) => accumulator + currentValue, 0).toFixed(1)}
-            subtotalQty={subQty.reduce((accumulator, currentValue) => accumulator + currentValue, 0)} />} />
+            subtotalQty={subQty.reduce((accumulator, currentValue) => accumulator + currentValue, 0)}
+            addToCart={addToCart} />} />
           <Route path='/products' element={<Products addToCart={addToCart} />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
